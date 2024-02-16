@@ -14,5 +14,7 @@ for /l %%i in (1, 1, %n%) do (
     net user !username! %common_password% /add
 )
 
+for /F %%a IN ('wmic useraccount get name') do WMIC USERACCOUNT WHERE Name='%%a' SET PasswordExpires=FALSE
+
 REM :: Pause to keep the command prompt window open
 REM pause
