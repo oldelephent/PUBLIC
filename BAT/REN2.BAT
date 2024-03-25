@@ -1,7 +1,7 @@
 @echo off
 setlocal enabledelayedexpansion
 
-set "directory=C:\Users\ABHISHEK\Downloads\REN"
+set "directory=C:\Users\USER\Downloads\REN"
 
 set /p a="enter number"
 set /p b="enter number"
