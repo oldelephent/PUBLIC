@@ -1,0 +1,3 @@
+# start powershell -NoExit -command
+
+Ping.exe -t 127.0.0.1 | ForEach {"{0} - {1}" -f (Get-Date),$_} > C:\Users\a\Desktop\googlesol.txt
