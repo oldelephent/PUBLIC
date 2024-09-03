@@ -1,25 +1,21 @@
-start "" powershell.exe invoke-webrequest -uri "https://nsearchives.nseindia.com/archives/equities/bhavcopy/pr/PR230824.zip" -outfile (Split-Path -Path "https://nsearchives.nseindia.com/archives/equities/bhavcopy/pr/PR230824.zip" -leaf)
-start "" powershell.exe invoke-webrequest -uri "https://nsearchives.nseindia.com/content/cm/BhavCopy_NSE_CM_0_0_0_20240823_F_0000.csv.zip" -outfile (Split-Path -Path "https://nsearchives.nseindia.com/content/cm/BhavCopy_NSE_CM_0_0_0_20240823_F_0000.csv.zip" -leaf)
-start "" powershell.exe invoke-webrequest -uri "https://nsearchives.nseindia.com/content/fo/BhavCopy_NSE_FO_0_0_0_20240823_F_0000.csv.zip" -outfile (Split-Path -Path "https://nsearchives.nseindia.com/content/fo/BhavCopy_NSE_FO_0_0_0_20240823_F_0000.csv.zip" -leaf)
-start "" powershell.exe invoke-webrequest -uri "https://nsearchives.nseindia.com/archives/cd/bhav/BhavCopy_NSE_CD_0_0_0_20240823_F_0000.csv.zip" -outfile (Split-Path -Path "https://nsearchives.nseindia.com/archives/cd/bhav/BhavCopy_NSE_CD_0_0_0_20240823_F_0000.csv.zip" -leaf)
+start "" powershell.exe invoke-webrequest -uri "https://nsearchives.nseindia.com/archives/equities/bhavcopy/pr/PR020924.zip" -outfile (Split-Path -Path "https://nsearchives.nseindia.com/archives/equities/bhavcopy/pr/PR020824.zip" -leaf)
+start "" powershell.exe invoke-webrequest -uri "https://nsearchives.nseindia.com/content/cm/BhavCopy_NSE_CM_0_0_0_20240902_F_0000.csv.zip" -outfile (Split-Path -Path "https://nsearchives.nseindia.com/content/cm/BhavCopy_NSE_CM_0_0_0_20240802_F_0000.csv.zip" -leaf)
+start "" powershell.exe invoke-webrequest -uri "https://nsearchives.nseindia.com/content/fo/BhavCopy_NSE_FO_0_0_0_20240902_F_0000.csv.zip" -outfile (Split-Path -Path "https://nsearchives.nseindia.com/content/fo/BhavCopy_NSE_FO_0_0_0_20240802_F_0000.csv.zip" -leaf)
+start "" powershell.exe invoke-webrequest -uri "https://nsearchives.nseindia.com/archives/cd/bhav/BhavCopy_NSE_CD_0_0_0_20240902_F_0000.csv.zip" -outfile (Split-Path -Path "https://nsearchives.nseindia.com/archives/cd/bhav/BhavCopy_NSE_CD_0_0_0_20240802_F_0000.csv.zip" -leaf)
 
 timeout /t 10 
 
 7z e BhavCopy_NSE_CD_0_0_0_*
 7z e BhavCopy_NSE_CM_0_0_0_*
 7z e BhavCopy_NSE_FO_0_0_0_*
-7z e PR230824.zip Pd*
+7z e PR020924.zip Pd*
 
 timeout /t 10 
 
-move BhavCopy_NSE_CD_0_0_0_*.csv b
-move BhavCopy_NSE_CM_0_0_0_*.csv b
-move BhavCopy_NSE_FO_0_0_0_*.csv b
-move pd*.csv b
 
-
-timeout /t 10 
-
+start "" curl -O "https://www.bseindia.com/download/BhavCopy/Equity/BhavCopy_BSE_CM_0_0_0_20240902_F_0000.CSV"
+start "" curl -O "https://www.bseindia.com/download/Bhavcopy/Derivative/BhavCopy_BSE_FO_0_0_0_20240930_F_0000.CSV"
+start "" curl -O "https://www.bseindia.com/bsedata/CIML_bhavcopy/BhavCopy_BSE_CD_0_0_0_20240902_F_0000.CSV"
 start "" curl -O "https://www.bseindia.com/downloads/Help/file/scrip.zip"
 start "" curl -O "https://www.bseindia.com/downloads/Help/file/CO.zip"
 start "" curl -O "https://www.bseindia.com/downloads1/INDEX_CO.zip"
@@ -29,6 +25,16 @@ start "" curl -O "https://www.bseindia.com/downloads1/Live_Masters_for_Equity_De
 start "" curl -O "https://www.bseindia.com/downloads1/Master.zip"
 
 timeout /T 10
+
+move BhavCopy_NSE_CD_0_0_0_*.csv b
+move BhavCopy_NSE_CM_0_0_0_*.csv b
+move BhavCopy_NSE_FO_0_0_0_*.csv b
+move pd*.csv b
+move BhavCopy_BSE_CM_0_0_0_2024* b
+move BhavCopy_BSE_FO_0_0_0_2024* b
+move BhavCopy_BSE_CD_0_0_0_2024* b
+
+timeout /t 10 
 
 start "" 7z e "BFXREF.zip" -aoa
 start "" 7z e "CO.zip" -aoa
