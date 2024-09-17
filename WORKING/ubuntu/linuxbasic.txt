@@ -1,0 +1,46 @@
+
+
+https://help.ubuntu.com/community/LinuxFilesystemTreeOverview 
+
+MAIN DIRECTORIES
+
+The standard Ubuntu directory structure mostly follows the Filesystem Hierarchy Standard, which can be referred to for more detailed information.
+
+Here, only the most important directories in the system will be presented.
+
+/BIN is a place for most commonly used terminal commands, like ls, mount, rm, etc.
+
+/BOOT contains files needed to start up the system, including the Linux kernel, a RAM disk image and bootloader configuration files.
+
+/DEV contains all device files, which are not regular files but instead refer to various hardware devices on the system, including hard drives.
+
+/ETC contains system-global configuration files, which affect the system's behavior for all users.
+
+/HOME home sweet home, this is the place for users' home directories.
+
+/LIB contains very important dynamic libraries and kernel modules
+
+/MEDIa is intended as a mount point for external devices, such as hard drives or removable media (floppies, CDs, DVDs).
+
+/MNT is also a place for mount points, but dedicated specifically to "temporarily mounted" devices, such as network filesystems.
+
+/OPT can be used to store additional software for your system, which is not handled by the package manager.
+
+/PROC is a virtual filesystem that provides a mechanism for kernel to send information to processes.
+
+/ROOT is the superuser's home directory, not in /home/ to allow for booting the system even if /home/ is not available.
+
+/RUN is a tmpfs (temporary file system) available early in the boot process where ephemeral run-time data is stored. Files under this directory are removed or truncated at the beginning of the boot process.
+(It deprecates various legacy locations such as /var/run, /var/lock, /lib/init/rw in otherwise non-ephemeral directory trees as well as /dev/.* and /dev/shm  which are not device files.)
+
+/SBIN contains important administrative commands that should generally only be employed by the superuser.
+
+/SRV can contain data directories of services such as HTTP (/srv/www/) or FTP.
+
+/SYS is a virtual filesystem that can be accessed to set or obtain information about the kernel's view of the system.
+
+/TMP is a place for temporary files used by applications.
+
+/USR contains the majority of user utilities and applications, and partly replicates the root directory structure, containing for instance, among others, /usr/bin/ and /usr/lib.
+
+/VAR is dedicated to variable data, such as logs, databases, websites, and temporary spool (e-mail etc.) files that persist from one boot to the next. A notable directory it contains is /var/log where system log files are kept.

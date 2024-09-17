@@ -1,0 +1,56 @@
+S.NO	ID	Exam Name 	Exam Time 	Candidate Name 	Dealer Name 	Exam Start Group	Exam Delivery Group
+1		CISSP	03:00AM IST 	Rocky Immanuel David Tkacz 	Varun	GAGAN	ANUP
+2		CISSP	03:00AM IST 	 Essome Mbu	 Rahul Parkash	MD. ALAM	VICKY
+3	89 787 017	CISSP	3:45 AM	 Lalit chawla	Sapna(Jain sir)	GAGAN	ANUP
+4		CISSP	04:30 AM IST	Travis Wilson	Chitrak	MD. ALAM	VICKY
+5		CISSP	 04:45 AM IST	Faisal Kadri	 Arun Singh	GAGAN	ANUP/RAMA
+6	89 790 014	CISSP_OP	7:00am IST	Moses Karanja Gitahi	 Varun 	MD. ALAM	VICKY/FARAH
+7		SY0-601	09:00 AM IST	Imran Nazir 	Arun Singh 	VIKRAM	SANJANA
+8	916-966-952-674	GCP professional cloud architect	 10:00 am	Mohinder Kumar	Sapna(Jain sir)	SYED	ANJU
+9	571-571-636-154	 CISA	10:30 am ist  	IKENNA ALAJEMBA 	Dharmendra	CHINU	SULEKHA
+10		SAA-C02	 10:45 AM IST	Arpit Srivastava	ankur	MANISH SAARSAR	ARVIND
+11		PRINCE2® Foundation 	10:45 am ist 	Shubhneet Kaur 	 shashi am	VIJAY	ANJU
+12		300-410	11:30am IST	Balmeeki Kumar Pandey	Alam Noida	DEEPANSHU	ANASH
+13		CLF-C01	11:30 AM IST  	Atul Sharma	SUSHIL GULATI	GAUTAM	RITIK SHARMA
+14	PSI-WITHOUT	 SAA-C02 	11:30 AM IST	Thomas Lewis	(without/Sumit New)	PRAVEEN	BEENU
+15		Salesforce Certified Administration	11:30AM IST	Jenia Robinson	Vishal	SAHIL	KIRTI
+16	433-564-397-443	CRISC	11:30 Am IST	YOGESH JADHAV	Trilok	ABHISHEK	JHA SIR
+17		PMP	11:45AM IST 	Jiger Nadola	INTEKHAB 	HARISH	SAJID
+18	951-567-781-937	AWS Certified Security - Specialty	12:30pm IST	Oriabumere Akhigbe	Nitin Dhiman	SAHIL KUMAR	DIGAMBER
+19		200-301	 12:45 Pm IST	Mr. Sudhir Laxman Sutar	Pawan Rajender 	ASHISH SHARMA	AMANPREET
+20	89 795 553	PMP	12:45pm IST 	Muhammad Jahanzaib	Dharmjit	AMAN	PREM SINGH
+21		SAA-C02	1:00PM IST	Suresh Nagar	Swavesh	GAUTAM	NEERAJ
+22		 1Z0-808 	1:00 pm ist	Sai Praneetha Yanduri	PAUL	MITHILESH	ANASH
+23	CENTER BASED	SAA-C02	1.00 PM IST	VIKAS GOEL	ANKUR 	HIMANSHU	ITI
+24		Az-104	01:00PM IST	Amardeep kumar 	shashi am	VIKRAM	SANJANA
+25		200-301	 01:15PM IST 	Amit kar	Anil atri(Kavita)	CHINU	YUKTA
+26		830-01 (Riverbed)	01:45 PM IST	ANOOP VYAS	 ANOOP VYAS	VIJAY	VIJAY/TRAINER
+27	[89 782 984	SY0-601	2 pm  ist	Jozanne Avera	Chitrak	MANISH SAARSAR	FARAH
+28		CLF-C01	02:15 PM IST	Taha	Sapna(Poonam mam)	DEEPANSHU	RAMA
+29	89 769 348]	PMP 	2:30 pM, ist	Akhilendra Verma	Ruchi	GAUTAM	SAJID
+30		NSE7_EFW-6.2	2:45 pm IST	Mayur Dadasaheb Jadhav	chandresh	SAHIL	ANASH
+31		AZ-900	2:45PM IST	Yousuf Khan	sapna(pragya)	ABHISHEK	SUBHASH
+32		 MD-100	 03:00 PM IST	Obie J. Bolton	Chitrak	HARISH	SULEKHA
+33	450-466-643-654	CKA	03:00 PM IST	Kavish Nair	Trilok	SAHIL KUMAR	SUMIT SIR/MADAM
+34	WITHOUT	MD-100 	03:15 PM IST	Eugene Bostick	(Without/Chinu)	PRAVEEN	NEERAJ
+35	CENTER BASED	MS-203 	3:45 pm ist	Rohit Kumar Kukreja	Sapna(Kavya)	HIMANSHU	ANASH
+36	[342-286-619-597]	CISM	 4 pm ist	ANTHONY OSEI	vishal	AMAN	DIGAMBER
+37	278-704-246-500	 Google Cloud Certified - Associate Cloud Engineer 	4:00 PM	Varun Kumar 	MUKESH SSDN	ASHISH SHARMA	KIRTI
+38		CISA	 04:30PM IST	SAMUEL Darko	Ruchi	GAUTAM	RITIK SHARMA
+39	714-277-675-443	CISA	 4:30pm IST 	Akua Dadson 	Vishal	NEERAJ	ARVIND
+40		MuleSoft Certified Developer (MCD) - Level 1 	 04:40 PM IST	kiflom semereab	trilok	VIJAY	KIRTI
+41		200-301	5:00pm  IST	Gabriel Iredia Aboiralor	Sapna(Poonam mam)	VIKRAM	RAJA KUMAR
+42	[89 757 430	SY0-601	 5 pm ist	Francois Honore Noukimi	chitrak	CHINU	ANKIT
+43		200-301	5:15PM IST	Varun Doomra	VARINDER PATIYALA 	DEEPAK	MUKESH KUMAR
+44	946-661-636-323	CISA 	5:30 pm ist 	Aditya Nukala	Chitrak 	ABHISHEK	KIRTI
+45	CENTER BASED	 350-601 	5:45pm IST 	Manish Singh Ananad	Suchi Mam	PRAVEEN	JHA SIR/TRAINER
+46		DP-300	5:45 pm ist	Omkar Mhatre	kiran stand	HARISH	AMANPREET
+47		SY0-601	06:15PM IST 	BabaTunde Abiola	Vishal	SAHIL KUMAR	NEERAJ
+48	721-838-940-958	AWS Solution Architect Associate	6:30PM IST	Munachiso Okechukwu 	Varun	GAUTAM	RAJA KUMAR
+49		PMP	07:00 PM IST	Santosh Krishna Prasanth	Priya	AMAN	MUKESH KUMAR
+50		350 - 701	7:00 Pm IST	Mr. Naga Sai Satish Manepalli	Dharmendra	ASHISH SHARMA	SUBHASH
+51		AWS Solution Architect Professional	07:15PM IST	Pratyush Kumar	 varun	MITHILESH	ANKIT
+52		OG0-093	7:45 pm ist	Amrish Prakash Gaur	MANU ARORA	NEERAJ	SUBHASH
+53		PCNSE 	8:00 pm ist  	Sekhar Manne	MUKESH SSDN	ASHISH SHARMA	ANASH
+54		OG0-093	8:45PM IST	Safeer Shah	rachna	DEEPAK	SUBHASH
+55	(PSI)	SAA-C02	10:00 PM IST	Alhaji Varmuyah Kromah	Chitrak	DEEPAK	RAJA KUMAR

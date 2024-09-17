@@ -1,0 +1,2 @@
+df : command to see all dirves
+du : is to see file and folder size 

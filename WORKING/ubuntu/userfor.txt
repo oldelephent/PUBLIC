@@ -1,0 +1,15 @@
+1- In the first field, you will see the user name.
+
+2- The second field (The x character) is a representation of the encrypted password. The encrypted password is stored in /etc/shadow file.
+
+3- The UID or the user ID.
+
+4- The next field refers to the primary group of the user.
+
+5- Then, it shows user ID info such as the address, email, etc.
+
+6- After this, you will see the home directory of the user.
+
+7- The last field is the shell used by that user.
+
+However, although the information is quite useful, if you only want to list users’ names in a basic way, you can use this command:
