@@ -1,0 +1,1 @@
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters" /v AllowInsecureGuestAuth /t REG_DWORD /d 1 /f

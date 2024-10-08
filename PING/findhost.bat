@@ -1,0 +1,1 @@
+for /f %%a in ('type ip.txt') do ping -n 1 -a %%a | findstr /N "^" | find /I "2:" >> hostname.txt
