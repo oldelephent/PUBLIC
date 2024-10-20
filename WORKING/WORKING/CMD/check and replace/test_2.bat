@@ -1,1 +1,0 @@
-for /l %%g in () do @( test.bat & timeout /t 2 )

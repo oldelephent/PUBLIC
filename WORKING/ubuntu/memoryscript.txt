@@ -1,5 +1,0 @@
-to get ram usages used/total
-free -h | awk '/Mem:/ {print $3 "/" $2}'
-
-to get top 10 memorey used task
-ps axch -o cmd:10,%mem --sort=-%mem | head
