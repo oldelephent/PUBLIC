@@ -1,3 +1,5 @@
+import re
+import csv
 
 file_to_read = r""
 file_to_write = r""
@@ -9,9 +11,10 @@ with open(file_to_read,'r')as f1:
     data = []
 
     for row in file:
-        #if row['Series'] not in ["A","EQ"] and re.match("^WBF",row['Client']):
         if row['Series'] not in ["A","EQ"] or re.match("^WBF",row['Client']):
             row['Open Authorize Quantity'] = 0
+        del row['Series']
+
         data.append(row)
             
 with open (file_to_write,'w',newline='')as f2:
