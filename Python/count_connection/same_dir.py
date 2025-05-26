@@ -1,33 +1,63 @@
-# import pandas as pd
-# import os 
+import os
+import pandas as pd
 
+#current dir for xls
+xls_file_path = os.getcwd()
 
-# xls_file_path = os.getcwd() 
+#making filterd_data folder in same dir for filtered xls
+os.makedirs(fr"{xls_file_path}\filterd_data", exist_ok=True)
 
-# os.makedirs(fr"{xls_file_path}\filterd_data", exist_ok=True)
+# Define the file paths for filtered csv 
+blank = fr"{xls_file_path}\xls_count.csv"
 
-# for i in range(100):
-#     file_path = fr"{xls_file_path}" + fr"\ConnectionInfo{i}.xls"
-#     outname = fr"{xls_file_path}" + fr"\filterd_data\ConnectionInfo{i}.xlsx"
-
-#     if not os.path.exists(file_path):
-#         continue
-
-#     # Read the Excel file (it seems to be .xls, not a CSV)
-#     df = pd.read_csv(file_path,sep='\t')
-
-#     # Apply filters correctly with parentheses
-#     filtered_data = df[
-#         (df['Connection Status'] == "Connected") & (
-#             (~df['Description'].str.contains("_Web",na=False)) &
-#             (~df['Description'].str.contains("Login Successfull from IP",na=False)) 
-            
-#         )
-#     ]
-
-#     # Get unique UserID entries from filtered data
-#     unique_codes = filtered_data.drop_duplicates(subset='UserID')
+# Loop through the files and process each one
+for i in range(10000):
+    file_path = xls_file_path + fr"\ConnectionInfo{i}.xls"
+    outname = fr"{xls_file_path}" + fr"\filterd_data\ConnectionInfo{i}.xlsx"
     
-#     # Save to Excel
-#     unique_codes.to_excel(outname, index=False,header=False)
-#     print("File Processed:- " + os.path.basename(file_path))
+    # Skip files that don't exist
+    if not os.path.exists(file_path):
+        continue
+    
+    # Read the data from the file
+    df = pd.read_csv(file_path, sep='\t')
+    
+    # Apply filters to the data
+    filtered_data = df[
+        (df['Connection Status'] == "Connected") & 
+        (~df['Description'].str.contains("_Web", na=False)) &
+        (~df['Description'].str.contains("Login Successfull from IP", na=False))
+    ]
+    
+    # Get unique UserID entries
+    unique_codes = filtered_data.drop_duplicates(subset='UserID')
+    
+    # Initialize counters for Android and iOS (reset for each file)
+    android_users = set()
+    ios_users = set()
+    
+    # Loop through the filtered data to classify the users
+    for _, row in unique_codes.iterrows():
+        user_id = row['UserID']
+        description = row['Description']
+        
+        if description.endswith("Android"):
+            android_users.add(user_id)  # Add to Android if ends with Android
+        else:
+            ios_users.add(user_id)  # Everything else goes to iOS
+    
+    # Count unique user IDs for Android, iOS, and Total
+    android_count = len(android_users)
+    ios_count = len(ios_users)
+    total_count = android_count + ios_count
+
+    unique_codes.to_excel(outname, index=False,header=False)
+    print("File Processed:- " + os.path.basename(file_path))
+
+    # Write results to the output file with Total column
+    with open(blank, 'a') as f:
+        f.write(f"{os.path.basename(file_path)}, Android ,{android_count}, iOS, {ios_count}, Total, {total_count}\n")
+
+    
+os.startfile('xls_count.csv')
+os.startfile('filterd_data')
