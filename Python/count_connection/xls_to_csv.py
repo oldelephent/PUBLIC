@@ -3,8 +3,8 @@ import os
 import pandas as pd
 
 # Set the directory containing .xls files
-input_folder = r"E:\ABHISHEK\WORKING\python\VISHWAS\counting_unique_user\connectioninfo 1apr to 30 apr"
-output_folder = r"E:\ABHISHEK\WORKING\python\VISHWAS\counting_unique_user\csv"
+input_folder = r"path"
+output_folder = r"path"
 
 os.makedirs(output_folder, exist_ok=True)
 
