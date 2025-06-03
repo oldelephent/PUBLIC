@@ -1,0 +1,1 @@
+ping trade.vishwasonline.com -t | ForEach-Object { "$(Get-Date -Format 'yyyy-MM-dd HH:mm:ss') $_" } > ctct_vishwas.txt
