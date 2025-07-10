@@ -1,10 +1,9 @@
-
 import os
 import pandas as pd
 
 # Set the directory containing .xls files
-input_folder = r"path"
-output_folder = r"path"
+input_folder = input(r"Enter xls files path  ")
+output_folder = input(r"Enter output folder path ")
 
 os.makedirs(output_folder, exist_ok=True)
 
