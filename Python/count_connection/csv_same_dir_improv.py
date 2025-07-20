@@ -2,24 +2,24 @@ import os
 import pandas as pd
 
 #current dir for xls
-xls_file_path = os.getcwd() 
+csv_file_path = os.getcwd() 
     
 # #making filterd_data folder in same dir for filtered xls
-os.makedirs(fr"{xls_file_path}\filterd_data", exist_ok=True)
+os.makedirs(fr"{csv_file_path}\filterd_data", exist_ok=True)
 
 # # Define the file paths for filtered csv 
-blank = fr"{xls_file_path}\xls_count.csv"
+blank = fr"{csv_file_path}\csv_count.csv"
 
-for i in os.listdir(xls_file_path):
-        if i.endswith('.xls'):
+for i in os.listdir(csv_file_path):
+        if i.endswith('.csv'):
                 
                 #Extract the file name without extension
                 file_name = os.path.splitext(i)[0]
 
-                outname = fr"{xls_file_path}\filterd_data\{file_name}.csv"
+                outname = fr"{csv_file_path}\filterd_data\{file_name}.csv"
                 
                 # Read the data from the file
-                df = pd.read_csv(i, sep='\t')
+                df = pd.read_csv(i)
 
                 # Apply filters to the data
                 filtered_data = df[
@@ -57,5 +57,5 @@ for i in os.listdir(xls_file_path):
                 with open(blank, 'a') as f:
                     f.write(f"{os.path.basename(i)}, Android ,{android_count}, iOS, {ios_count}, Total, {total_count}\n")
 
-os.startfile('xls_count.csv')
-os.startfile('filterd_data')
+# os.startfile('xls_count.csv')
+# os.startfile('filterd_data')
