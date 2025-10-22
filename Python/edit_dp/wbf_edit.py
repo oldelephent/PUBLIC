@@ -29,7 +29,36 @@ with open(dp_file,'w',newline='') as csvwriting:
     writing.writeheader()
     writing.writerows(data)
 
-## WORKING WITH TWO CODE
+
+
+## ANOTHER VERSION ________________________
+
+# finding_dp_file = glob.glob("DP*")
+# dp_file = ' '.join(finding_dp_file)
+
+# with open(dp_file, 'r') as dp:
+#     file = csv.DictReader(dp)
+#     header = file.fieldnames
+#     data = []
+
+#     for row in file:
+#         if row['Client'].startswith("WBF") or row['Client'] in ("DCM222","DCJ35"):
+#             row["Open Authorize Quantity"] = 0
+
+#         data.append(row)
+
+# with open(dp_file,'w',newline='')as file:
+#     writer = csv.DictWriter(file,fieldnames=header)
+#     writer.writeheader()
+#     writer.writerows(data)
+
+
+
+
+
+
+
+## WORKING WITH TWO CODE ______________
 
 # with open(dp_file,'r') as csvreading:
 #     read = csv.DictReader(csvreading)
