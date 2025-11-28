@@ -62,14 +62,21 @@ function Show-Dashboard {
     Clear-Host
     Write-Host "==== File Monitoring Dashboard ====" -ForegroundColor Cyan
     Write-Host "Checking folder: $folderPath`n"
-
+    $counter = 0 
+        
     foreach ($pattern in $Files) {
         $matchedFiles = Get-ChildItem -Path $folderPath -File -Name | Where-Object { $_ -like "*$pattern*" }
+        
+        $counter++
 
         if ($matchedFiles.Count -gt 0) {
-            Write-Host "$pattern found" -ForegroundColor Green
+            Write-Host -NoNewline $counter -ForegroundColor Yellow
+            # Write-Host "$counter $pattern found" -ForegroundColor Green
+            Write-Host " $pattern found" -ForegroundColor Green
         } else {
-            Write-Host "$pattern missing" -ForegroundColor Red
+            Write-Host -NoNewline $counter -ForegroundColor Yellow
+            # Write-Host "$counter $pattern missing" -ForegroundColor Red
+            Write-Host " $pattern missing" -ForegroundColor Red
         }
     }
 
@@ -80,4 +87,3 @@ while ($true) {
     Show-Dashboard
     Start-Sleep -Seconds 5
 }
-
