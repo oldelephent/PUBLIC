@@ -27,8 +27,8 @@ df.loc[
 df.to_csv(
     *finding_dp_file,
      index=False,
-     quoting=csv.QUOTE_NONE,
-    #  escapechar='\\',
-    #  lineterminator="\n"
+     quoting=csv.QUOTE_MINIMAL,
+     escapechar='\\',
+     lineterminator="\r\n"
      
      )
