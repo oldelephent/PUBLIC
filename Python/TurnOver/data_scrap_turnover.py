@@ -31,7 +31,7 @@ def filter_data():
             # row_int = int(len(filtered_data['Turnover']))
             # filtered_data.loc[row_int,'Turnover'] = filtered_data['Turnover'].sum()
 
-            filtered_data.loc['Total', 'Turnover'] = filtered_data['Turnover'].sum()
+            filtered_data.loc['Total', 'Turnover'] = filtered_data['Turnover'].sum().round(2)
             
             with open(output_file, 'a') as f:
                 f.write(f"File: {file_names}\n")
